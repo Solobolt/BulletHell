@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
 
 	public int innerClip = 30;
 
+	public int enemyNumb = 0;
+
 	// Use this for initialization
 	void Start () {
 	

@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Lazor : MonoBehaviour {
+
+	private GameManager gameManager;
 
 	private float projectileSpeed = 500.0f;
 
@@ -17,6 +19,7 @@ public class Lazor : MonoBehaviour {
 	void Start () {
 		myTransform = this.transform;
 		lifeTime = Time.time + lifeTimeDuration;
+		gameManager = FindObjectOfType<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -24,7 +27,7 @@ public class Lazor : MonoBehaviour {
 		myTransform.position += Time.deltaTime * projectileSpeed * this.transform.forward;
 
 		//Kill projectile at the end of its life
-		if(Time.time > lifeTime)
+		if(Time.time > lifeTime || transform.position.z > gameManager.zBoundry)
 		{
 			Destroy(this.gameObject);
 		}
@@ -34,7 +37,7 @@ public class Lazor : MonoBehaviour {
 	{
 		if(otherObject.tag == "Enemy")
 		{
-			otherObject.GetComponent <Enemy>().takeDamage(damage);
+			otherObject.GetComponent <Enemy>().TakeDamage(damage);
 			Destroy (this.gameObject);
 		}
 	}

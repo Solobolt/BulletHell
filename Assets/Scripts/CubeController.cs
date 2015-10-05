@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CubeController : MonoBehaviour {
-
+	
 	private Transform myTransform;
 
 	private Vector3 playerPosition;
@@ -14,7 +14,8 @@ public class CubeController : MonoBehaviour {
 	public GameObject lazor;
 	public GameObject[] muzzle;
 	private float lazorFireTime;
-	private float lazorFireRate = 0.15f;
+	private float lazorFireRate = 0.1f;
+	public int fireMode = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -92,18 +93,38 @@ public class CubeController : MonoBehaviour {
 		myTransform.position = playerPosition;
 	}
 
+	//Handles the fireing of the weapons
 	private void fireLazors()
 	{
 		if (Input.GetMouseButton (0)&& Time.time > lazorFireTime)
 		{
-			for (int i = 0; i < muzzle.Length; i++)
-			{
-				Instantiate (lazor,muzzle[i].transform.position,muzzle[i].transform.rotation);
-			}
-
+			fireModes ();
 			lazorFireTime = Time.time + lazorFireRate;
 		}
 	}
 
+	//Handles how the player fires
+	private void fireModes()
+	{
+		switch (fireMode) 
+		{
+		case 0:
+			Instantiate (lazor, muzzle[0].transform.position, muzzle[0].transform.rotation);
+			break;
 
+		case 1:
+			for (int i = 1; i < 3; i++)
+			{
+				Instantiate (lazor, muzzle[i].transform.position, new Quaternion(0,0,0,0));
+			}
+			break;
+
+		case 2:
+			for (int i = 0; i < muzzle.Length; i++)
+			{
+				Instantiate (lazor, muzzle[i].transform.position, muzzle[i].transform.rotation);
+			}
+			break;
+		}
+	}
 }
