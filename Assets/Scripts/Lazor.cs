@@ -5,7 +5,7 @@ public class Lazor : MonoBehaviour {
 
 	private GameManager gameManager;
 
-	private float projectileSpeed = 500.0f;
+	private float projectileSpeed = 400.0f;
 
 	private Transform myTransform;
 

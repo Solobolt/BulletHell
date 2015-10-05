@@ -13,9 +13,9 @@ public class Enemy : MonoBehaviour {
 	private Transform myTransform;
 
 	private float lazorFireTime;
-	private float lazorFireRate = 1f;
+	private float lazorFireRate = 2f;
 
-	private float health = 40.0f;
+	private float health = 20.0f;
 
 	// Use this for initialization
 	void Start () {

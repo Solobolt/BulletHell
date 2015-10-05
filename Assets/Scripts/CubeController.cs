@@ -20,7 +20,6 @@ public class CubeController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		myTransform = this.transform;
-
 		gameManager = FindObjectOfType <GameManager>();
 	}
 	
@@ -34,35 +33,36 @@ public class CubeController : MonoBehaviour {
 	//Handles basic movement for cube
 	private void Movement()
 	{
+		Time.timeScale = 0.1f;
 		playerPosition = myTransform.position;
 		if(Input.GetKey ("a"))
 		{
 			playerPosition.x = playerPosition.x - moveSpeed * Time.deltaTime;
+			Time.timeScale = 1f;
 		}
 
 		if (Input.GetKey ("d"))
 		{
 			playerPosition.x = playerPosition.x + moveSpeed * Time.deltaTime;
+			Time.timeScale = 1f;
 		}
 
 		if (Input.GetKey ("w"))
 		{
 			playerPosition.z = playerPosition.z + moveSpeed * Time.deltaTime;
+			Time.timeScale = 1f;
 		}
 
 		if (Input.GetKey ("s"))
 		{
 			playerPosition.z = playerPosition.z - moveSpeed * Time.deltaTime;
+			Time.timeScale = 1f;
 		}
 
 		if (Input.GetKey ("space")) 
 		{
-			Time.timeScale = 0.5f;
+			Time.timeScale = 2f;
 		} 
-		else 
-		{
-			Time.timeScale = 1f;
-		}
 
 		myTransform.position = playerPosition;
 	}
@@ -96,10 +96,15 @@ public class CubeController : MonoBehaviour {
 	//Handles the fireing of the weapons
 	private void fireLazors()
 	{
-		if (Input.GetMouseButton (0)&& Time.time > lazorFireTime)
+		if (Input.GetMouseButtonDown (0)&& Time.time > lazorFireTime)
 		{
 			fireModes ();
 			lazorFireTime = Time.time + lazorFireRate;
+		}
+
+		if (Input.GetMouseButton(0)) 
+		{
+			Time.timeScale = 1f;
 		}
 	}
 

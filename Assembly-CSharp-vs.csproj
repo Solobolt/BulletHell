@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Prefabs\EnemyWaves\WaveStart.cs" />
      <Compile Include="Assets\Scripts\CubeController.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyLazor.cs" />
@@ -53,6 +54,7 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Lazor.cs" />
      <Compile Include="Assets\Scripts\PickUpRotate.cs" />
+     <Compile Include="Assets\Scripts\PlayerHitBox.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.7/Standalone/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -12,13 +12,24 @@ public class GameManager : MonoBehaviour {
 
 	public int enemyNumb = 0;
 
+	public int livesLeft = 3;
+
 	// Use this for initialization
 	void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update () 
+	{
+		if (enemyNumb == 0) 
+		{
+				Time.timeScale = 1f;
+		}
+	}
+
+	public void LifeRemove()
+	{
+		livesLeft--;
 	}
 }

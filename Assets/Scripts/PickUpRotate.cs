@@ -7,6 +7,8 @@ public class PickUpRotate : MonoBehaviour {
 	private float movementSpeed = -25.0f;
 	private Transform myTransform;
 
+	public Material[] material;
+
 	private int rand = Random.Range(1,3);
 
 	private CubeController player;
@@ -16,6 +18,7 @@ public class PickUpRotate : MonoBehaviour {
 		myTransform = this.transform;
 		player = FindObjectOfType<CubeController> ();
 		gameManger = FindObjectOfType<GameManager> ();
+		renderer.material = material[rand - 1];
 	}
 	
 	// Update is called once per frame
@@ -31,7 +34,7 @@ public class PickUpRotate : MonoBehaviour {
 
 	void OnTriggerEnter (Collider coll)
 	{
-		if (coll.gameObject.tag == "Player")
+		if (coll.gameObject.tag == "FullPlayer")
 		{
 			player.fireMode = rand;
 			Destroy (gameObject);
