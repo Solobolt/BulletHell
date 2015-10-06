@@ -11,11 +11,14 @@ public class CubeController : MonoBehaviour {
 
 	GameManager gameManager;
 
+
+	public PlayerMissile playerMissile;
 	public GameObject lazor;
 	public GameObject[] muzzle;
 	private float lazorFireTime;
 	private float lazorFireRate = 0.1f;
 	public int fireMode = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -96,7 +99,7 @@ public class CubeController : MonoBehaviour {
 	//Handles the fireing of the weapons
 	private void fireLazors()
 	{
-		if (Input.GetMouseButtonDown (0)&& Time.time > lazorFireTime)
+		if (Input.GetMouseButton (0)&& Time.time > lazorFireTime)
 		{
 			fireModes ();
 			lazorFireTime = Time.time + lazorFireRate;
@@ -111,6 +114,7 @@ public class CubeController : MonoBehaviour {
 	//Handles how the player fires
 	private void fireModes()
 	{
+		float randAngle = Random.Range (0,360);
 		switch (fireMode) 
 		{
 		case 0:
@@ -128,6 +132,13 @@ public class CubeController : MonoBehaviour {
 			for (int i = 0; i < muzzle.Length; i++)
 			{
 				Instantiate (lazor, muzzle[i].transform.position, muzzle[i].transform.rotation);
+			}
+			break;
+		
+		case 3:
+			for (int i = 0; i < muzzle.Length; i++)
+			{
+				Instantiate (playerMissile, muzzle[i].transform.position, new Quaternion(0,0,0,0));
 			}
 			break;
 		}

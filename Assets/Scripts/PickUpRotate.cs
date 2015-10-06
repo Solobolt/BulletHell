@@ -4,12 +4,12 @@ using System.Collections;
 public class PickUpRotate : MonoBehaviour {
 	private GameManager gameManger;
 	private float rotationSpeed = 100f;
-	private float movementSpeed = -25.0f;
+	private float movementSpeed = 25.0f;
 	private Transform myTransform;
 
 	public Material[] material;
 
-	private int rand = Random.Range(1,3);
+	private int rand = Random.Range(1,4);
 
 	private CubeController player;
 

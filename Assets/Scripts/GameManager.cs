@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
@@ -12,7 +13,13 @@ public class GameManager : MonoBehaviour {
 
 	public int enemyNumb = 0;
 
+	public GameObject liveLeftUIObject;
 	public int livesLeft = 3;
+
+	public GameObject[] enemyUnitList;
+
+	public GameObject enemiesKilledUIObject;
+	public int enemiesKilled = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +33,12 @@ public class GameManager : MonoBehaviour {
 		{
 				Time.timeScale = 1f;
 		}
+		//Update enemy unit list
+		enemyUnitList = GameObject.FindGameObjectsWithTag ("Enemy");
+
+		//NEW UI stuff
+		enemiesKilledUIObject.GetComponent <Text> ().text = "Enemies Killed:" + enemiesKilled;
+		liveLeftUIObject.GetComponent <Text> ().text = "Lives:" + livesLeft;
 	}
 
 	public void LifeRemove()

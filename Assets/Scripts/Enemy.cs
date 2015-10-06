@@ -6,10 +6,12 @@ public class Enemy : MonoBehaviour {
 
 	public GameObject EnemyLazor;
 
+	private GameObject player;
+
 	private GameManager gameManager;
 
-	private float movementSpeed = -20.0f;
-	
+	private float movementSpeed = 20.0f;
+
 	private Transform myTransform;
 
 	private float lazorFireTime;
@@ -17,11 +19,16 @@ public class Enemy : MonoBehaviour {
 
 	private float health = 20.0f;
 
+	private float rotationSpeed = 2.0f;
+	private float adjRotationSpeed;
+	private Quaternion targetRotation;
+
 	// Use this for initialization
 	void Start () {
 		myTransform = this.transform;
-		gameManager = FindObjectOfType <GameManager>();
+		gameManager = GameObject.FindGameObjectWithTag ("GameManager").GetComponent <GameManager>();
 		gameManager.enemyNumb ++;
+		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 	
 	// Update is called once per frame
@@ -29,6 +36,15 @@ public class Enemy : MonoBehaviour {
 		Move ();
 		CheckIfDead ();
 		checkIfOffScreen ();
+
+		if (player.transform.position.z < myTransform.position.z)
+		{
+			targetRotation = Quaternion.LookRotation (player.transform.position - myTransform.position);
+			adjRotationSpeed = Mathf.Min (rotationSpeed*Time.deltaTime,1);
+			transform.rotation = Quaternion.Lerp (transform.rotation,targetRotation,adjRotationSpeed);
+
+		}
+
 
 		if (Time.time > lazorFireTime) 
 		{
@@ -53,7 +69,7 @@ public class Enemy : MonoBehaviour {
 		int roll = Random.Range (1,100);
 		if (roll <= 5)
 		{
-			Instantiate (pickUp, transform.position,transform.rotation);
+			Instantiate (pickUp, transform.position,new Quaternion(180,0,0,0));
 		}
 	}
 
@@ -76,6 +92,7 @@ public class Enemy : MonoBehaviour {
 
 	private void removeEnemy()
 	{
+		gameManager.enemiesKilled ++;
 		gameManager.enemyNumb --;
 		Destroy(this.gameObject);
 	}

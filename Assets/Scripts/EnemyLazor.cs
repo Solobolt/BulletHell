@@ -21,7 +21,7 @@ public class EnemyLazor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		myTransform.position -= Time.deltaTime * projectileSpeed * this.transform.forward;
+		myTransform.position += Time.deltaTime * projectileSpeed * this.transform.forward;
 		
 		//Kill projectile at the end of its life
 		if(Time.time > lifeTime || transform.position.z < -gameManager.zBoundry)
