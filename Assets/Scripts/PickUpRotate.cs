@@ -18,7 +18,7 @@ public class PickUpRotate : MonoBehaviour {
 		myTransform = this.transform;
 		player = FindObjectOfType<CubeController> ();
 		gameManger = FindObjectOfType<GameManager> ();
-		renderer.material = material[rand - 1];
+		GetComponent<Renderer>().material = material[rand - 1];
 	}
 	
 	// Update is called once per frame
