@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
     //Handles the movement of the player
     private void Movement()
     {
+        
         playerPosition = myTransform.position;
 
         if (Input.GetAxis("Vertical") != 0)
@@ -57,8 +58,13 @@ public class PlayerController : MonoBehaviour {
             if (Time.time > lazorFireTime)
             {
                 print("NO ACTION MAPPED: (Fire2)");
+                Time.timeScale = 2;
                 lazorFireTime = Time.time + lazorFireRate;
             }
+        }
+        else
+        {
+            Time.timeScale = 1;
         }
 
         myTransform.position = playerPosition;
