@@ -4,13 +4,14 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
     private Transform myTransform;
-
     private Vector3 playerPosition;
-
     public float moveSpeed = 100f;
 
     GameManager gameManager;
 
+    public GameObject lazor;
+    private float lazorFireTime;
+    private float lazorFireRate = 0.1f;
 
     //Controls setup
     private string fireWeapon = "space";
@@ -42,9 +43,22 @@ public class PlayerController : MonoBehaviour {
             playerPosition.x = playerPosition.x + (Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime);
         }
 
-        if (Input.GetKey(fireWeapon))
+        if (Input.GetAxis("Fire1") != 0)
         {
-            //Time.timeScale = 2f;
+            if (Time.time > lazorFireTime)
+            {
+                Instantiate(lazor, myTransform.position, myTransform.rotation);
+                lazorFireTime = Time.time + lazorFireRate;
+            }
+        }
+
+        if (Input.GetAxis("Fire2") != 0)
+        {
+            if (Time.time > lazorFireTime)
+            {
+                print("NO ACTION MAPPED: (Fire2)");
+                lazorFireTime = Time.time + lazorFireRate;
+            }
         }
 
         myTransform.position = playerPosition;
