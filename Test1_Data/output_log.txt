@@ -2,9 +2,9 @@ Mono path[0] = 'D:/USER DATA/Documents/GitHub/BulletHell/Test1_Data/Managed'
 Mono path[1] = 'D:/USER DATA/Documents/GitHub/BulletHell/Test1_Data/Mono'
 Mono config path = 'D:/USER DATA/Documents/GitHub/BulletHell/Test1_Data/Mono/etc'
 PlayerConnection initialized from D:/USER DATA/Documents/GitHub/BulletHell/Test1_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55117
-Broadcasting "[IP] 169.254.139.23 [Port] 55117 [Flags] 2 [Guid] 1455905367 [EditorId] 2242563891 [Version] 1048832 [Id] WindowsPlayer(WIN-44S2Q89RROB) [Debug] 0" to [169.254.255.255:54997]...
-PlayerConnection already initialized - listening to [169.254.139.23:55117]
+PlayerConnection initialized network socket : 0.0.0.0 55021
+Broadcasting "[IP] 169.254.139.23 [Port] 55021 [Flags] 2 [Guid] 3379392875 [EditorId] 2724534155 [Version] 1048832 [Id] WindowsPlayer(WIN-44S2Q89RROB) [Debug] 0" to [169.254.255.255:54997]...
+PlayerConnection already initialized - listening to [169.254.139.23:55021]
 Initialize engine version: 5.2.1f1 (44735ea161b3)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -22,15 +22,330 @@ Loading D:\USER DATA\Documents\GitHub\BulletHell\Test1_Data\Managed\UnityEngine.
 Platform assembly: D:\USER DATA\Documents\GitHub\BulletHell\Test1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading D:\USER DATA\Documents\GitHub\BulletHell\Test1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\USER DATA\Documents\GitHub\BulletHell\Test1_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.067 seconds
+- Completed reload, in  0.064 seconds
 desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: D:\USER DATA\Documents\GitHub\BulletHell\Test1_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 8318 -> priority: 1 
-  Thread -> id: 583c -> priority: 1 
+  Thread -> id: 4aac -> priority: 1 
+  Thread -> id: 7364 -> priority: 1 
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
+NO ACTION MAPPED: (P2_Fire2)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Player2Controller:Movement() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:105)
+Player2Controller:Update() (at D:\USER DATA\Documents\GitHub\BulletHell\Assets\Player2Controller.cs:42)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
 NO ACTION MAPPED: (P2_Fire2)
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
