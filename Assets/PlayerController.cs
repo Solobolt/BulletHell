@@ -14,12 +14,19 @@ public class PlayerController : MonoBehaviour {
     private float lazorFireRate = 0.1f;
 
     //Controls setup
+    public GameObject weaponBarrel;
     private string useSpecial;
     public GameObject[] muzzle;
 
     //Aiming
     float aimingX;
     float aimingY;
+
+    //Tilting
+    float tiltX = 0;
+    float tiltZ = 0;
+
+    public GameObject playerModel;
 
     // Use this for initialization
     void Start () {
@@ -39,47 +46,59 @@ public class PlayerController : MonoBehaviour {
         playerPosition = myTransform.position;
 
         //Handles basic movemenet of player
-        if (Input.GetAxis("Vertical") != 0)
+        if (Input.GetAxis("P1_Vertical") != 0)
         {
-            playerPosition.z = playerPosition.z + (Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime);
+            float inputValue = Input.GetAxis("P1_Vertical");
+            playerPosition.z = playerPosition.z + (inputValue * moveSpeed * Time.deltaTime);
+            tiltZ = inputValue * 20;
+        }
+        else
+        {
+            tiltZ = 0;
         }
 
-        if (Input.GetAxis("Horizontal") != 0)
+        if (Input.GetAxis("P1_Horizontal") != 0)
         {
-            playerPosition.x = playerPosition.x + (Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime);
+            float inputValue = Input.GetAxis("P1_Horizontal");
+            playerPosition.x = playerPosition.x + (inputValue * moveSpeed * Time.deltaTime);
+            tiltX = inputValue * 20;
         }
+        else
+        {
+            tiltX = 0;
+        }        
 
         // Handles aiming of player
-        if(Input.GetAxis("Mouse X") != 0)
+        if (Input.GetAxis("P1_Mouse X") != 0)
         {
-            aimingX = Input.GetAxis("Mouse X");
+            aimingX = -Input.GetAxis("P1_Mouse X");
         }
+        else aimingX = 0;
 
-        if (Input.GetAxis("Mouse Y") != 0)
+        if (Input.GetAxis("P1_Mouse Y") != 0)
         {
-            aimingY = Input.GetAxis("Mouse Y");
+            aimingY = -Input.GetAxis("P1_Mouse Y");
         }
+        else aimingY = 0;
 
-        
+        float angle = (Mathf.Atan2(aimingX, aimingY) * Mathf.Rad2Deg);
+        weaponBarrel.transform.rotation = Quaternion.Euler(myTransform.rotation.x, angle, myTransform.rotation.z);
+        playerModel.transform.rotation = Quaternion.Euler(tiltZ, 0, -tiltX);
 
-        if (Input.GetAxis("Fire1") != 0)
+        if (Input.GetAxis("P1_Fire1") != 0)
         {
             if (Time.time > lazorFireTime)
             {
-                float angle = Mathf.Atan2(aimingX,aimingY)*Mathf.Rad2Deg;
-                Transform bullet = muzzle[0].transform;
-                bullet.rotation = Quaternion.Euler(0, 0, angle);
-                Instantiate(lazor, muzzle[0].transform.position, bullet.rotation);
+                Instantiate(lazor, muzzle[0].transform.position, muzzle[0].transform.rotation);
                 lazorFireTime = Time.time + lazorFireRate;
-                print(angle);
             }
         }
 
-        if (Input.GetAxis("Fire2") != 0)
+        if (Input.GetAxis("P1_Fire2") != 0)
         {
             if (Time.time > lazorFireTime)
             {
-                print("NO ACTION MAPPED: (Fire2)");
+                print("NO ACTION MAPPED: (P1_Fire2)");
                 Time.timeScale = 2;
                 lazorFireTime = Time.time + lazorFireRate;
             }
@@ -117,5 +136,14 @@ public class PlayerController : MonoBehaviour {
             playerPosition.z = -gameManager.zBoundry;
         }
         myTransform.position = playerPosition;
+    }
+
+    //Handles collitions
+    private void OnTriggerEnter(Collider otherObject)
+    {
+        if (otherObject.tag == "EnemyLazor")
+        {
+            gameManager.P1LifeRemove();
+        }
     }
 }

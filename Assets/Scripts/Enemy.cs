@@ -86,8 +86,9 @@ public class Enemy : MonoBehaviour {
 	{
 		if (transform.position.z < (-gameManager.zBoundry - 20))
 		{
-			removeEnemy ();
-		}
+            gameManager.enemyNumb--;
+            Destroy(this.gameObject);
+        }
 	}
 
 	private void removeEnemy()

@@ -124,7 +124,7 @@ public class CubeController : MonoBehaviour {
 		case 1:
 			for (int i = 1; i < 3; i++)
 			{
-				Instantiate (lazor, muzzle[i].transform.position, new Quaternion(0,0,0,0));
+				Instantiate (lazor, muzzle[i].transform.position, muzzle[i].transform.rotation);
 			}
 			break;
 
@@ -138,7 +138,7 @@ public class CubeController : MonoBehaviour {
 		case 3:
 			for (int i = 0; i < muzzle.Length; i++)
 			{
-				Instantiate (playerMissile, muzzle[i].transform.position, new Quaternion(0,0,0,0));
+				Instantiate (playerMissile, muzzle[i].transform.position, Quaternion.Euler(0,randAngle,0));
 			}
 			break;
 		}

@@ -21,7 +21,7 @@ public class PlayerHitBox : MonoBehaviour {
 	{
 		if(otherObject.tag == "EnemyLazor")
 		{
-			gameManager.LifeRemove ();
+			gameManager.P2LifeRemove ();
 			player.fireMode = 0;
 		}
 	}

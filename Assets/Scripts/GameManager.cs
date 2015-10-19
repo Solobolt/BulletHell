@@ -13,10 +13,13 @@ public class GameManager : MonoBehaviour {
 
 	public int enemyNumb = 0;
 
-	public GameObject liveLeftUIObject;
-	public int livesLeft = 3;
+	public GameObject P1LifeUIObject;
+    public GameObject P2LifeUIObject;
 
-	public GameObject[] enemyUnitList;
+    public int P1Lives = 3;
+    public int P2Lives = 3;
+
+    public GameObject[] enemyUnitList;
 
 	public GameObject enemiesKilledUIObject;
 	public int enemiesKilled = 0;
@@ -38,11 +41,17 @@ public class GameManager : MonoBehaviour {
 
 		//NEW UI stuff
 		enemiesKilledUIObject.GetComponent <Text> ().text = "Enemies Killed:" + enemiesKilled;
-		liveLeftUIObject.GetComponent <Text> ().text = "Lives:" + livesLeft;
-	}
+		P1LifeUIObject.GetComponent <Text> ().text = "P1 Lives:" + P1Lives;
+        P2LifeUIObject.GetComponent <Text> ().text = "P2 Lives:" + P2Lives;
+    }
 
-	public void LifeRemove()
-	{
-		livesLeft--;
-	}
+    public void P1LifeRemove()
+    {
+        P1Lives--;
+    }
+
+    public void P2LifeRemove()
+    {
+        P2Lives--;
+    }
 }
