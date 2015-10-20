@@ -10,14 +10,10 @@ public class PickUpRotate : MonoBehaviour {
 	public Material[] material;
 
     private int rand; 
-
-	private CubeController player;
-
 	// Use this for initialization
 	void Start () {
         rand = Random.Range(1, 4);
         myTransform = this.transform;
-		player = FindObjectOfType<CubeController> ();
 		gameManger = FindObjectOfType<GameManager> ();
 		GetComponent<Renderer>().material = material[rand - 1];
 	}

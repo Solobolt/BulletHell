@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour {
 	{
 		waveDelay += Time.deltaTime;
 
-		if (waveDelay > 2f && gameManager.enemyNumb == 1)
+		if (waveDelay > 2f && gameManager.enemyNumb <= 1)
 		{
 			SpawnWave();
 			waveDelay = 0;

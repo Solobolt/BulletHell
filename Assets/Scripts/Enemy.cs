@@ -55,12 +55,15 @@ public class Enemy : MonoBehaviour
     void LookAtPlayer()
     {
         FindClosestPlayer();
-        if (closestPlayer.transform.position.z < myTransform.position.z)
+        if(closestPlayer!=null)
         {
-            targetRotation = Quaternion.LookRotation(closestPlayer.transform.position - myTransform.position);
-            adjRotationSpeed = Mathf.Min(rotationSpeed * Time.deltaTime, 1);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, adjRotationSpeed);
+            if (closestPlayer.transform.position.z < myTransform.position.z)
+            {
+                targetRotation = Quaternion.LookRotation(closestPlayer.transform.position - myTransform.position);
+                adjRotationSpeed = Mathf.Min(rotationSpeed * Time.deltaTime, 1);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, adjRotationSpeed);
 
+            }
         }
     }
 
@@ -120,19 +123,22 @@ public class Enemy : MonoBehaviour
     {
         for (int i = 0; i < players.Length; i++)
         {
-            if (i == 0)
+            if (players[i] != null)
             {
-                closestPlayer = players[0];
+
+                if (i == 0)
+                {
+                    closestPlayer = players[0];
+                }
+
+                float playerDistnace = Vector3.Distance(myTransform.position, players[i].transform.position);
+                float oldDistance = Vector3.Distance(myTransform.position, closestPlayer.transform.position);
+
+                if (playerDistnace <= oldDistance)
+                {
+                    closestPlayer = players[i];
+                }
             }
-
-            float playerDistnace = Vector3.Distance(myTransform.position, players[i].transform.position);
-            float oldDistance = Vector3.Distance(myTransform.position, closestPlayer.transform.position);
-
-            if (playerDistnace <= oldDistance)
-            {
-                closestPlayer = players[i];
-            }
-
         }
     }
 }

@@ -39,8 +39,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //JoystickMovement();
-		KeyboardMovement ();
+        JoystickMovement();
         CheckBoundry();
     }
 
@@ -60,11 +59,6 @@ public class PlayerController : MonoBehaviour {
 			}
 
 			playerPosition.z = playerPosition.z + (inputValue * moveSpeed * Time.deltaTime);
-			tiltZ = inputValue * 20;
-		}
-		else
-		{
-			tiltZ = 0;
 		}
 		
 		if (Input.GetButton("P1_HorizontalK"))
@@ -79,12 +73,7 @@ public class PlayerController : MonoBehaviour {
 				inputValue = -1;
 			}
 			playerPosition.x = playerPosition.x + (inputValue * moveSpeed * Time.deltaTime);
-			tiltX = inputValue * 20;
 		}
-		else
-		{
-			tiltX = 0;
-		} 
 
 		if (Input.GetButton("P1_Fire1K"))
 		{
@@ -107,9 +96,7 @@ public class PlayerController : MonoBehaviour {
 		else
 		{
 			Time.timeScale = 1;
-		}
-
-		playerModel.transform.rotation = Quaternion.Euler(tiltZ, 0, -tiltX);		
+		}	
 		myTransform.position = playerPosition;
 	}
     //Handles the movement of the player
@@ -139,7 +126,11 @@ public class PlayerController : MonoBehaviour {
         else
         {
             tiltX = 0;
-        }        
+        }
+
+        float angle = (Mathf.Atan2(aimingX, aimingY) * Mathf.Rad2Deg);
+        weaponBarrel.transform.rotation = Quaternion.Euler(myTransform.rotation.x, angle, myTransform.rotation.z);
+        playerModel.transform.rotation = Quaternion.Euler(tiltZ, 0, -tiltX);
 
         // Handles aiming of player
         if (Input.GetAxis("P1_Mouse X") != 0)
@@ -153,10 +144,6 @@ public class PlayerController : MonoBehaviour {
             aimingY = -Input.GetAxis("P1_Mouse Y");
         }
         else aimingY = 0;
-
-        float angle = (Mathf.Atan2(aimingX, aimingY) * Mathf.Rad2Deg);
-        weaponBarrel.transform.rotation = Quaternion.Euler(myTransform.rotation.x, angle, myTransform.rotation.z);
-        playerModel.transform.rotation = Quaternion.Euler(tiltZ, 0, -tiltX);
 
         if (Input.GetAxis("P1_Fire1") != 0)
         {
@@ -181,6 +168,10 @@ public class PlayerController : MonoBehaviour {
         }
 
         myTransform.position = playerPosition;
+
+        KeyboardMovement();
+
+        
     }
 
     //Keeps the player within a certain area 
