@@ -148,6 +148,10 @@ public class Player2Controller : MonoBehaviour {
         if (otherObject.tag == "EnemyLazor")
         {
             gameManager.P2LifeRemove();
+			if(gameManager.P2Lives == 0)
+			{
+				Destroy (this.gameObject);
+			}
         }
     }
 }

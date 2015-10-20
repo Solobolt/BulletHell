@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\PinBall\Assets\Scripts\Left Flipper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerController.cs">
     <Files>
-      <File FileName="..\PinBall\Assets\Scripts\Left Flipper.cs" Line="4" Column="1" />
+      <File FileName="Assets\PlayerController.cs" Line="95" Column="36" />
+      <File FileName="Assets\Player2Controller.cs" Line="151" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

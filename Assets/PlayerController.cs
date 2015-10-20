@@ -36,11 +36,81 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Movement();
+        //JoystickMovement();
+		KeyboardMovement ();
         CheckBoundry();
     }
+
+	private void KeyboardMovement()
+	{
+		playerPosition = myTransform.position;
+		if (Input.GetButton("P1_VerticalK"))
+		{
+			float inputValue = 0;
+			if(Input.GetKey ("w"))
+			{
+				inputValue = 1;
+			}
+			if(Input.GetKey ("s"))
+			{
+				inputValue = -1;
+			}
+
+			playerPosition.z = playerPosition.z + (inputValue * moveSpeed * Time.deltaTime);
+			tiltZ = inputValue * 20;
+		}
+		else
+		{
+			tiltZ = 0;
+		}
+		
+		if (Input.GetButton("P1_HorizontalK"))
+		{
+			float inputValue = 0;
+			if(Input.GetKey ("d"))
+			{
+				inputValue = 1;
+			}
+			if(Input.GetKey ("a"))
+			{
+				inputValue = -1;
+			}
+			playerPosition.x = playerPosition.x + (inputValue * moveSpeed * Time.deltaTime);
+			tiltX = inputValue * 20;
+		}
+		else
+		{
+			tiltX = 0;
+		} 
+
+		if (Input.GetButton("P1_Fire1K"))
+		{
+			if (Time.time > lazorFireTime)
+			{
+				Instantiate(lazor, muzzle[0].transform.position, muzzle[0].transform.rotation);
+				lazorFireTime = Time.time + lazorFireRate;
+			}
+		}
+		
+		if (Input.GetButton("P1_Fire2K"))
+		{
+			if (Time.time > lazorFireTime)
+			{
+				print("NO ACTION MAPPED: (P1_Fire2)");
+				Time.timeScale = 2;
+				lazorFireTime = Time.time + lazorFireRate;
+			}
+		}
+		else
+		{
+			Time.timeScale = 1;
+		}
+
+		playerModel.transform.rotation = Quaternion.Euler(tiltZ, 0, -tiltX);		
+		myTransform.position = playerPosition;
+	}
     //Handles the movement of the player
-    private void Movement()
+    private void JoystickMovement()
     {
         
         playerPosition = myTransform.position;
@@ -98,7 +168,7 @@ public class PlayerController : MonoBehaviour {
         {
             if (Time.time > lazorFireTime)
             {
-                print("NO ACTION MAPPED: (P1_Fire2)");
+                print("TEST ACTION MAPPED: (P1_Fire2)");
                 Time.timeScale = 2;
                 lazorFireTime = Time.time + lazorFireRate;
             }
@@ -144,6 +214,10 @@ public class PlayerController : MonoBehaviour {
         if (otherObject.tag == "EnemyLazor")
         {
             gameManager.P1LifeRemove();
+			if(gameManager.P1Lives == 0)
+			{
+				Destroy (this.gameObject);
+			}
         }
     }
 }
