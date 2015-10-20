@@ -10,9 +10,11 @@ public class Player2Controller : MonoBehaviour {
 
     GameManager gameManager;
 
+	public GameObject playerMissile;
     public GameObject lazor;
     private float lazorFireTime;
     private float lazorFireRate = 0.1f;
+	public int fireMode = 0;
 
     //Controls setup
     public GameObject weaponBarrel;
@@ -86,15 +88,17 @@ public class Player2Controller : MonoBehaviour {
         else aimingY = 0;
 
         float angle = (Mathf.Atan2(aimingX, aimingY) * Mathf.Rad2Deg);
-        weaponBarrel.transform.rotation = Quaternion.Euler(myTransform.rotation.x, angle, myTransform.rotation.z);
+
+		weaponBarrel.transform.rotation = Quaternion.Euler(myTransform.rotation.x, angle, myTransform.rotation.z);
+		//Quaternion.Euler(myTransform.rotation.x, angle, myTransform.rotation.z);
+
         playerModel.transform.rotation = Quaternion.Euler(tiltZ, 0, -tiltX);
 
         if (Input.GetAxis("P2_Fire1") != 0)
         {
             if (Time.time > lazorFireTime)
             {
-                Instantiate(lazor, muzzle[0].transform.position, muzzle[0].transform.rotation);
-                lazorFireTime = Time.time + lazorFireRate;
+				fireWeapons ();
             }
         }
 
@@ -154,4 +158,37 @@ public class Player2Controller : MonoBehaviour {
 			}
         }
     }
+
+	void fireWeapons()
+	{
+		
+		switch (fireMode) 
+		{
+		case 0:
+			Instantiate (lazor, muzzle[0].transform.position, muzzle[0].transform.rotation);
+			break;
+			
+		case 1:
+			for (int i = 1; i < 3; i++)
+			{
+				Instantiate (lazor, muzzle[i].transform.position, muzzle[i].transform.rotation);
+			}
+			break;
+			
+		case 2:
+			for (int i = 0; i < muzzle.Length; i++)
+			{
+				Instantiate (lazor, muzzle[i].transform.position, muzzle[i].transform.rotation);
+			}
+			break;
+			
+		case 3:
+			for (int i = 0; i < muzzle.Length; i++)
+			{
+				Instantiate (playerMissile, muzzle[i].transform.position, muzzle[i].transform.rotation);
+			}
+			break;
+		}
+		lazorFireTime = Time.time + lazorFireRate;
+	}
 }

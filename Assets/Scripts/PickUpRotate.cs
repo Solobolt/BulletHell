@@ -35,9 +35,22 @@ public class PickUpRotate : MonoBehaviour {
 
 	void OnTriggerEnter (Collider coll)
 	{
-		if (coll.gameObject.tag == "FullPlayer")
+		if (coll.gameObject.tag == "Player")
 		{
-			player.fireMode = rand;
+			print ("Herbalerb");
+
+			if(coll.gameObject.GetComponent<PlayerController>() != null)
+			{
+				coll.gameObject.GetComponent<PlayerController>().fireMode=rand;
+			}
+			else 
+			{
+				if(coll.gameObject.GetComponent<Player2Controller>() != null)
+				{
+					coll.gameObject.GetComponent<Player2Controller>().fireMode=rand;
+				}
+			}
+
 			Destroy (gameObject);
 		}
 	}

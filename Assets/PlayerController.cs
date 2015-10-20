@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour {
 
     GameManager gameManager;
 
+
+	public GameObject playerMissile;
     public GameObject lazor;
     private float lazorFireTime;
     private float lazorFireRate = 0.1f;
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject weaponBarrel;
     private string useSpecial;
     public GameObject[] muzzle;
+	public int fireMode = 0;
 
     //Aiming
     float aimingX;
@@ -159,8 +162,7 @@ public class PlayerController : MonoBehaviour {
         {
             if (Time.time > lazorFireTime)
             {
-                Instantiate(lazor, muzzle[0].transform.position, muzzle[0].transform.rotation);
-                lazorFireTime = Time.time + lazorFireRate;
+				fireWeapons ();
             }
         }
 
@@ -220,4 +222,37 @@ public class PlayerController : MonoBehaviour {
 			}
         }
     }
+
+	void fireWeapons()
+	{
+
+		switch (fireMode) 
+		{
+		case 0:
+			Instantiate (lazor, muzzle[0].transform.position, muzzle[0].transform.rotation);
+			break;
+			
+		case 1:
+			for (int i = 1; i < 3; i++)
+			{
+				Instantiate (lazor, muzzle[i].transform.position, muzzle[i].transform.rotation);
+			}
+			break;
+			
+		case 2:
+			for (int i = 0; i < muzzle.Length; i++)
+			{
+				Instantiate (lazor, muzzle[i].transform.position, muzzle[i].transform.rotation);
+			}
+			break;
+			
+		case 3:
+			for (int i = 0; i < muzzle.Length; i++)
+			{
+				Instantiate (playerMissile, muzzle[i].transform.position, muzzle[0].transform.rotation);
+			}
+			break;
+		}
+		lazorFireTime = Time.time + lazorFireRate;
+	}
 }
