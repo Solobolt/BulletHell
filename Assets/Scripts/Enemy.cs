@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
         Move();
         CheckIfDead();
         CheckIfOffScreen();
